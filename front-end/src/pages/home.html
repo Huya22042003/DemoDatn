@@ -1,0 +1,102 @@
+<section>
+  <div class="container my-5">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in listSanPham">
+          <th scope="row">{{$index + 1}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+          <td>
+            <a href="#home/{{$index}}" type="button" class="btn btn-dark"
+              >Xem chi tiết</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Thêm
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label"
+              >Tên sản phẩm</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="formGroupExampleInput"
+              placeholder="Example name placeholder"
+              ng-model="name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Giá</label>
+            <input
+              type="number"
+              class="form-control"
+              id="formGroupExampleInput2"
+              placeholder="Another price placeholder"
+              ng-model="price"
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button
+            type="button"
+            ng-click="add()"
+            data-bs-dismiss="modal"
+            class="btn btn-primary"
+          >
+            Thêm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -29,6 +29,9 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Product findByIndex(@PathVariable("id") int index) {
+        if(index > service.getList().size() || index < 0) {
+            return null;
+        }
         return service.getList().get(index);
     }
 

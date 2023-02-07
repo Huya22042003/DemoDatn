@@ -1,0 +1,31 @@
+<section>
+  <div class="container my-5">
+    <div class="mb-3">
+      <label for="formGroupExampleInput" class="form-label">Tên sản phẩm</label>
+      <input
+        type="text"
+        class="form-control"
+        id="formGroupExampleInput"
+        placeholder="Example input placeholder"
+        ng-model="product.name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="formGroupExampleInput2" class="form-label">Giá</label>
+      <input
+        type="number"
+        class="form-control"
+        id="formGroupExampleInput2"
+        placeholder="Another input placeholder"
+        ng-model="product.price"
+      />
+    </div>
+    <a href="#home" type="button" class="btn btn-secondary">Thoát</a>
+    <button type="button" ng-click="update()" class="btn btn-success">
+      Sửa
+    </button>
+    <button type="button" ng-click="delete()" class="btn btn-danger">
+      Xóa
+    </button>
+  </div>
+</section>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/plugin/bootstrap/bootstrap.min.css" />
+  </head>
+  <body ng-app="myApp">
+    <header>
+      <div class="container my-5">
+        <h1 class="text-center">Demo project Datn</h1>
+      </div>
+    </header>
+
+    <main>
+      <ng-view></ng-view>
+    </main>
+
+    <footer>
+      <div class="container my-5">
+        <h1 class="text-center">AHIHI</h1>
+      </div>
+    </footer>
+    <script src="../js/plugin/boostrap/bootstrap.bundle.js"></script>
+    <script src="../js/plugin/jquery/jquery.min.js"></script>
+    <script src="../lib/angular.js"></script>
+    <script src="../lib/angular-route.js"></script>
+    <script src="config/api.js"></script>
+    <script src="controller/home-controller/home-controller.js"></script>
+    <script src="controller/detail-controller/detail-controller.js"></script>
+    <script src="route.js"></script>
+  </body>
+</html>
