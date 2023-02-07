@@ -11,7 +11,7 @@ window.HomeController = function ($scope, $http) {
 
   $scope.add = function () {
     let getFormData = {
-      id: $scope.listSanPham.length + 1,
+      id: $scope.listSanPham[$scope.listSanPham.length - 1].id,
       name: $scope.name,
       price: parseFloat($scope.price),
     };
